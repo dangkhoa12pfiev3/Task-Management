@@ -1,0 +1,11 @@
+<!-- <div>Page 3</div>
+<label ng-model = "val1" ng-init="val1='12'" >12</label>+ <!--il faut casser au plus les elements visibles 
+<input type = "text" ng-model = "val2">
+<button type = "button" ng-click = "comp()">=</button>
+<label ng-bind = "resPage3"></label> -->
+
+
+<div>You have {{numberTaskleft}} task left</div>    
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="task in taskleftList">{{task.task}}</li>        
+</ul>

@@ -1,0 +1,25 @@
+<form>
+    <input type = "text" class = "form-control" placeholder="Task" ng-model="taskName">
+    <button ng-click = "addTask()" class="btn btn-info">Add</button>
+</form>
+
+<br/>
+<br/>
+<div>Your list has {{numberTask}} task </div>    
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="task in taskList track by task._id">
+        <input type = "checkbox"  ng-checked = "task.state === 'done'"
+           ng-click="modifyTask($index)"> {{task.task}}        
+        <button  ng-click = "deleteTask($index)">Remove</button>
+    </li>
+</ul>
+
+<!-- ng-checked = "task.state === 'done'" ng-change="modifyTask($index)"  -->
+
+<!-- au lieu d'utiliser ng-check est ng-change (ou il y an un confit) ng-check -> etat de task, ng-change : modifier etat de tache
+    utiliser ng-click: determiner l'evenement de modification l'etat d'un task
+    
+    
+    on peut dir: 
+       
+        ng-change <-> modifier etat de task -> ng-click -->
